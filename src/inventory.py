@@ -1,3 +1,5 @@
+import os
+
 print("Welcome!")
 print("==========")
 while True:
@@ -29,3 +31,7 @@ while True:
         print("Please insert a valid quantity")
 
 totalCost = productPrice * productQuantity
+os.system("cls")
+print (f"Your product is |{productName}|, the price is |${productPrice}|, the quantity is |{productQuantity}| and the total cost is |${totalCost}|")
+print("==========")
+print("Thanks for using our services!")
