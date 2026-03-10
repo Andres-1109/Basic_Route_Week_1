@@ -27,3 +27,5 @@ while True:
             break
     except ValueError:
         print("Please insert a valid quantity")
+
+totalCost = productPrice * productQuantity
