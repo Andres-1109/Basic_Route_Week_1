@@ -38,3 +38,11 @@ Users story
 
   Print of the data was implemented printing name, price and quantity including also the total cost calculated.
 
+  
+
+  Task 5
+
+  
+
+  Comments were added explaining details of the code and a general explanation about the program. 
+
