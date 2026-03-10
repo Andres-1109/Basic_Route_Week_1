@@ -30,3 +30,11 @@ Users story
 
   Calcultation of total cost was added. It's being calculated taking the product's price and multiplying it by the product's quantity.
 
+  
+
+  Task 4 
+
+  
+
+  Print of the data was implemented printing name, price and quantity including also the total cost calculated.
+
