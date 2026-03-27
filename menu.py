@@ -9,5 +9,7 @@ def menu(inventory):
             print(f"{i}. {option["option"]}")
         
         choice = validate_positive_int("Select an option: ", number_of_options) -1
-        options[choice]["action"](inventory)
+        result = options[choice]["action"](inventory)
+        if result:
+            break
 

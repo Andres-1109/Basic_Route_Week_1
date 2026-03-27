@@ -13,7 +13,25 @@ def add_product(inventory):
 
 def show_inventory(inventory):
     if inventory == []:
-        return print("The inventory is empty")
+        print("The inventory is empty")
+        return
     else:
         for i, product in enumerate(inventory, start=1):
             print(f"{i}. | Product: {product["product"]}| Total Price: {product["price"]}| Quantity: {product["quantity"]}|")
+
+def calculate_statistics(inventory):
+    if inventory == []:
+        return print("The inventory is empty")
+    else: 
+        total_inventory_price = 0
+        total_products_quantity = 0
+        for product in inventory:
+            total_inventory_price = total_inventory_price + product["price"]
+            total_products_quantity = total_products_quantity + product["quantity"]
+        print(f"The total price of the inventory is: ${total_inventory_price}")
+        print(f"The total quantity of products is: {total_products_quantity}")
+
+def exit_program(inventory):
+    print("Thanks for using the service!")
+    print("Closing the app...")
+    return True
