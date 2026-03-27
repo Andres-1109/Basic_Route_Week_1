@@ -1,3 +1,4 @@
+# This function validates that the result is a postive int and can evaluate a maximun range
 def validate_positive_int(message, max_range=None):
     while True:
         try:
@@ -8,7 +9,8 @@ def validate_positive_int(message, max_range=None):
                 return result
         except ValueError:
             print("Invalid answer")
-
+            
+# This validates that the entry is not empty
 def validate_not_empty(message):
     while True:
         try:

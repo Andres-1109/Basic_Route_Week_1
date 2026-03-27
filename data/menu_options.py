@@ -1,4 +1,6 @@
 from services import add_product, show_inventory, calculate_statistics, exit_program
+
+# This create the options that will appear in the menu
 def get_options():
     return [
         {"option":"Add product", "action": add_product},
