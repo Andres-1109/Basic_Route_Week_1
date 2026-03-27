@@ -11,4 +11,3 @@ def menu(inventory):
         choice = validate_positive_int("Select an option: ", number_of_options) -1
         options[choice]["action"](inventory)
 
-menu()
