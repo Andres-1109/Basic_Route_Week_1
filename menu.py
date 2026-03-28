@@ -1,5 +1,6 @@
 from data.menu_options import get_options
 from validations import validate_positive_int
+from services.csv_services import upload_csv
 
 def menu(inventory):
     while True:    
@@ -13,9 +14,10 @@ def menu(inventory):
         choice = validate_positive_int("Select an option: ", number_of_options) -1
 
         # This executes the function that is contained on the option's dictionary
-        result = options[choice]["action"](inventory)
+        inventory = options[choice]["action"](inventory)
 
         # This helps exit the program with the exit function that returns true
-        if result:
+        if inventory == "exit":
             break
+
 
