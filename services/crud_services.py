@@ -79,11 +79,21 @@ def calculate_statistics(inventory):
     else: 
         total_inventory_price = 0
         total_products_quantity = 0
+        most_expensive_product = {"price": 0}
+        most_quantity_product = {"quantity": 0}
         for product in inventory:
             total_inventory_price = total_inventory_price + product["price"]
             total_products_quantity = total_products_quantity + product["quantity"]
-        print(f"The total price of the inventory is: ${total_inventory_price}")
-        print(f"The total quantity of products is: {total_products_quantity}")
+            if most_expensive_product["price"] < product["price"]:
+                most_expensive_product = product
+            if most_quantity_product["quantity"] < product["quantity"]:
+                most_quantity_product = product
+        print(f"""
+              The total price of the inventory is: ${total_inventory_price}
+              The total quantity of products is: {total_products_quantity}
+              The most expensive product is {most_expensive_product["product"]}, price ${most_expensive_product["price"]}  
+              The product with more quantity is {most_quantity_product["product"]}, quantity {most_quantity_product["quantity"]}""")
+
 
 # This finish the program
 def exit_program(inventory):
