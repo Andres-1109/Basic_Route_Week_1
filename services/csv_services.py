@@ -8,6 +8,9 @@ path = base / "data" / "inventory.csv"
 
 # This creates a csv file with the actual inventory
 def save_csv(inventory):
+    '''
+    This creates a csv file with the actual inventory
+    '''
     if inventory == []:
         print("The inventory is empty")
     else:
@@ -42,7 +45,11 @@ def save_csv(inventory):
             os.system('cls')
             print(f'Unexpected error: {e}')
 
+# This upload a csv filo to the inventory of the program and uses validations for it to don't crash
 def upload_csv(inventory):
+            '''
+            This upload a csv filo to the inventory of the program and uses validations for it to don't crash
+            '''
             try:
                 if inventory == []:
                     with open (path, "r", newline="", encoding="utf-8") as f:
